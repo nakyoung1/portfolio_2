@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="lang-ko dark">
+    <canvas id="codeRain"></canvas>
+    <header class="top-bar">
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="top-actions">
+        <button id="lang-toggle">EN</button>
+        <button id="theme-toggle">light</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="section main">
+        <div class="intro-text fade-in">
+          <p class="intro-sub ko-text">
+            기획부터 UI까지,<br />
+            경험을 설계하는 개발자 이나경입니다.
+          </p>
+
+          <p class="intro-sub en-text">
+            Hello, I'm Nakyoung Lee.<br />
+            From ideas to interfaces, <br />I craft user-centered experiences.
+          </p>
+        </div>
+      </section>
+      <section
+        class="section about"
+        data-ko="소개 페이지"
+        data-en="About Me"
+        id="about"
+      >
+        소개 페이지
+      </section>
+      <section
+        class="section projects"
+        data-ko="프로젝트"
+        data-en="Projects"
+        id="projects"
+      >
+        프로젝트
+      </section>
+      <section
+        class="section contact"
+        data-ko="연락처"
+        data-en="Contact"
+        id="contact"
+      >
+        연락처
+      </section>
+    </div>
+    <button id="top-button" title="Go to top">△</button>
+    <script src="script.js"></script>
+  </body>
+</html>
