@@ -1,67 +1,399 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>포트폴리오</title>
-    <link rel="stylesheet" href="style.css" />
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <body class="lang-ko dark">
-    <canvas id="codeRain"></canvas>
+  <body class="lang-ko light">
+    <canvas id="codeRain"> </canvas>
+    <!-- 헤더 -->
     <header class="top-bar">
       <nav class="nav">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a data-en="About" data-ko="소개" href="#about"> About </a>
+          </li>
+          <li>
+            <a data-en="Skills" data-ko="기술" href="#skills"> Skills </a>
+          </li>
+          <li>
+            <a data-en="Projects" data-ko="프로젝트" href="#projects">
+              Projects
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="top-actions">
         <button id="lang-toggle">EN</button>
-        <button id="theme-toggle">light</button>
+        <button id="theme-toggle">dark</button>
       </div>
     </header>
-
     <div class="container">
+      <!-- 메인 인트로 -->
       <section class="section main">
         <div class="intro-text fade-in">
-          <p class="intro-sub ko-text">
-            기획부터 UI까지,<br />
+          <p
+            class="intro-sub"
+            data-en="
+            Hello, I'm Nakyoung Lee.&lt;br/&gt;
+            From ideas to interfaces, &lt;br/&gt;I craft user-centered experiences.
+          "
+            data-ko="
+            기획부터 UI까지,&lt;br/&gt;
             경험을 설계하는 개발자 이나경입니다.
-          </p>
-
-          <p class="intro-sub en-text">
-            Hello, I'm Nakyoung Lee.<br />
-            From ideas to interfaces, <br />I craft user-centered experiences.
+          "
+          >
+            기획부터 UI까지,
+            <br />
+            경험을 설계하는 개발자 이나경입니다.
           </p>
         </div>
       </section>
+      <!-- 소개 섹션 -->
       <section
         class="section about"
-        data-ko="소개 페이지"
         data-en="About Me"
+        data-ko="About Me"
         id="about"
       >
-        소개 페이지
+        <h2 data-en="About Me" data-ko="About Me">About Me</h2>
+        <div id="introduce-box">
+          <div class="wrapper">
+            <article class="about_icon">
+              <aside>
+                <img src="./img/about/name.svg" />
+              </aside>
+              <aside>
+                <h4 data-en="Name" data-ko="이름">이름</h4>
+                <p data-en="이나경" data-ko="이나경">이나경</p>
+              </aside>
+            </article>
+          </div>
+          <div class="wrapper">
+            <article class="about_icon">
+              <aside>
+                <img src="./img/about/birth.svg" />
+              </aside>
+              <aside>
+                <h4 data-en="Birthdate" data-ko="생년월일">생년월일</h4>
+                <p data-en="94.11.06" data-ko="94.11.06">94.11.06</p>
+              </aside>
+            </article>
+          </div>
+          <div class="wrapper">
+            <article class="about_icon">
+              <aside>
+                <img src="./img/about/location.svg" />
+              </aside>
+              <aside>
+                <h4 data-en="Location" data-ko="위치">위치</h4>
+                <p data-en="Dong-gu, Daegu" data-ko="대구광역시 동구">
+                  대구광역시 동구
+                </p>
+              </aside>
+            </article>
+          </div>
+          <div class="wrapper">
+            <article class="about_icon">
+              <aside>
+                <img src="./img/about/phone.svg" />
+              </aside>
+              <aside>
+                <h4 data-en="Phone" data-ko="휴대폰">휴대폰</h4>
+                <p data-en="010.8900.5730" data-ko="010.8900.5730">
+                  010.8900.5730
+                </p>
+              </aside>
+            </article>
+          </div>
+          <div class="wrapper">
+            <article class="about_icon">
+              <aside>
+                <img src="./img/about/email.svg" />
+              </aside>
+              <aside>
+                <h4 data-en="Email" data-ko="이메일">이메일</h4>
+                <p data-en="skrud5730@naver.com" data-ko="skrud5730@naver.com">
+                  skrud5730@naver.com
+                </p>
+              </aside>
+            </article>
+          </div>
+          <div class="wrapper">
+            <article class="about_icon">
+              <aside>
+                <img src="./img/about/education.svg" />
+              </aside>
+              <aside>
+                <h4 data-en="Education" data-ko="학력">학력</h4>
+                <p
+                  data-en="Kyungpook Univ. - Mechanical Eng."
+                  data-ko="경북대학교 기계공학부"
+                >
+                  경북대학교 기계공학부
+                </p>
+              </aside>
+            </article>
+          </div>
+        </div>
       </section>
+      <!-- 기술 섹션 -->
+      <section
+        class="section skills"
+        data-en="Skills"
+        data-ko="Skills"
+        id="skills"
+      >
+        <h2 data-en="Skills" data-ko="Skills">Skills</h2>
+        <div id="skills-container">
+          <div class="skill-box">
+            <div class="skill-icon" id="skill1-icon"></div>
+            <p data-en="JavaScript" data-ko="JavaScript">JavaScript</p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-icon" id="skill2-icon"></div>
+            <p data-en="HTML" data-ko="HTML">HTML</p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-icon" id="skill3-icon"></div>
+            <p data-en="CSS" data-ko="CSS">CSS</p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-icon" id="skill4-icon"></div>
+            <p data-en="Premiere Pro" data-ko="Premiere Pro">Premiere Pro</p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-icon" id="skill5-icon"></div>
+            <p data-en="Photoshop" data-ko="Photoshop">Photoshop</p>
+          </div>
+          <div class="skill-box">
+            <div class="skill-icon" id="skill6-icon"></div>
+            <p data-en="Illustrator" data-ko="Illustrator">Illustrator</p>
+          </div>
+        </div>
+      </section>
+      <!-- 프로젝트 섹션 -->
       <section
         class="section projects"
-        data-ko="프로젝트"
         data-en="Projects"
+        data-ko="Projects"
         id="projects"
       >
-        프로젝트
-      </section>
-      <section
-        class="section contact"
-        data-ko="연락처"
-        data-en="Contact"
-        id="contact"
-      >
-        연락처
+        <h2 data-en="Projects" data-ko="Projects">Projects</h2>
+        <div id="projects-container">
+          <div class="project-box">
+            <a href="https://nakyoung1.github.io/todolist/" target="_blank">
+              <img alt="To-Do List" src="img/todolist.jpg" />
+              <div class="project-hover">
+                <p data-en="Personal Project" data-ko="개인 프로젝트">
+                  개인 프로젝트
+                </p>
+                <h3 data-en="To-Do List" data-ko="To-Do List">To-Do List</h3>
+                <p
+                  data-en="Simple to-do list web page"
+                  data-ko="간단한 투두 리스트 웹페이지"
+                >
+                  간단한 투두 리스트 웹페이지
+                </p>
+                <p
+                  data-en="UI design, JS logic"
+                  data-ko="UI 구성, JS 로직 개발"
+                >
+                  UI 구성, JS 로직 개발
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="project-box">
+            <a href="https://nakyoung1.github.io/my_momentum/" target="_blank">
+              <img alt="Momentum" src="img/momentum.jpg" />
+              <div class="project-hover">
+                <p data-en="Personal Project" data-ko="개인 프로젝트">
+                  개인 프로젝트
+                </p>
+                <h3 data-en="Momentum" data-ko="Momentum">Momentum</h3>
+                <p
+                  data-en="Momentum clone web with weather, clock, quotes, background"
+                  data-ko="날씨, 시계, 명언, 배경 이미지 기능이 포함된 모멘텀 클론 웹"
+                >
+                  날씨, 시계, 명언, 배경 이미지 기능이 포함된 모멘텀 클론 웹
+                </p>
+                <p
+                  data-en="Implemented all features, Open API integration"
+                  data-ko="전체 기능 구현, Open API 연동"
+                >
+                  전체 기능 구현, Open API 연동
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="project-box">
+            <a href="https://nakyoung1.github.io/bom/" target="_blank">
+              <img alt="Pet Webpage" src="img/bom.png" />
+              <div class="project-hover">
+                <p data-en="Personal Project" data-ko="개인 프로젝트">
+                  개인 프로젝트
+                </p>
+                <h3 data-en="Pet Webpage" data-ko="Pet Webpage">Pet Webpage</h3>
+                <p
+                  data-en="Static web introducing pet dog and daily life"
+                  data-ko="반려견 소개 및 일상을 담은 간단한 정적 웹페이지"
+                >
+                  반려견 소개 및 일상을 담은 간단한 정적 웹페이지
+                </p>
+                <p
+                  data-en="HTML/CSS layout design, content structuring"
+                  data-ko="HTML/CSS 구조 설계, 콘텐츠 구성"
+                >
+                  HTML/CSS 구조 설계, 콘텐츠 구성
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="project-box">
+            <a
+              href="https://nakyoung1.github.io/webpage_project/"
+              target="_blank"
+            >
+              <img alt="전통주 - 한술담다" src="img/hansul.png" />
+              <div class="project-hover">
+                <p data-en="Personal Project" data-ko="개인 프로젝트">
+                  개인 프로젝트
+                </p>
+                <h3
+                  data-en="Traditional Liquor - Hansuldamda"
+                  data-ko="전통주 - 한술담다"
+                >
+                  전통주 - 한술담다
+                </h3>
+                <p
+                  data-en="Includes traditional liquor info and sommelier test feature"
+                  data-ko="전통주 소개 및 소믈리에 테스트 기능 포함"
+                >
+                  전통주 소개 및 소믈리에 테스트 기능 포함
+                </p>
+                <p
+                  data-en="UI design, dark/lang toggle, public API, search"
+                  data-ko="UI 설계, 다크모드/언어전환, 공공 API, 검색"
+                >
+                  UI 설계, 다크모드/언어전환, 공공 API, 검색
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="project-box">
+            <a href="https://nkpokemon.netlify.app/" target="_blank">
+              <img alt="포켓몬도감" src="img/pokemon.png" />
+              <div class="project-hover">
+                <p data-en="Personal Project" data-ko="개인 프로젝트">
+                  개인 프로젝트
+                </p>
+                <h3 data-en="Pokédex" data-ko="포켓몬도감">포켓몬도감</h3>
+                <p
+                  data-en="Web page providing various Pokémon information"
+                  data-ko="다양한 포켓몬 정보를 제공하는 웹페이지"
+                >
+                  다양한 포켓몬 정보를 제공하는 웹페이지
+                </p>
+                <p
+                  data-en="UI, search, dark/lang toggle, signup, comment, Pokémon API"
+                  data-ko="UI,검색,다크모드,언어전환,회원가입,댓글,포켓몬 API"
+                >
+                  UI,검색,다크모드,언어전환,회원가입,댓글,포켓몬 API
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="project-box">
+            <a href="https://sulbitdam-project.onrender.com" target="_blank">
+              <img alt="전통주 - 술빛담" src="img/sulbitdam.png" />
+              <div class="project-hover">
+                <p data-en="Team Project" data-ko="팀 프로젝트">팀 프로젝트</p>
+                <h3
+                  data-en="Traditional Liquor - Sulbitdam"
+                  data-ko="전통주 - 술빛담"
+                >
+                  전통주 - 술빛담
+                </h3>
+                <p
+                  data-en="Intro, sommelier test, recommendation system included"
+                  data-ko="전통주 소개, 소믈리에 테스트, 결과 기반 추천 포함"
+                >
+                  전통주 소개, 소믈리에 테스트, 결과 기반 추천 포함
+                </p>
+                <p
+                  data-en="All frontend + partial backend(Node.js)"
+                  data-ko="프론트엔드 전체 + 백엔드 일부(Node.js)"
+                >
+                  프론트엔드 전체 + 백엔드 일부(Node.js)
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="project-box">
+            <a href="https://d1i3d05ur40jbn.cloudfront.net" target="_blank">
+              <img alt="GPS 앱 WALKEE" src="img/WALKEE.png" />
+              <div class="project-hover">
+                <p data-en="Team Project" data-ko="팀 프로젝트">팀 프로젝트</p>
+                <h3
+                  data-en="GPS Tracking App - WALKEE"
+                  data-ko="GPS 트래킹 앱 - WALKEE"
+                >
+                  GPS 트래킹 앱 - WALKEE
+                </h3>
+                <p
+                  data-en="Draw images along GPS path"
+                  data-ko="GPS 기반으로 경로를 따라 그림을 그릴 수 있는 앱"
+                >
+                  GPS 기반으로 경로를 따라 그림을 그릴 수 있는 앱
+                </p>
+                <p
+                  data-en="Responsible for React UI and overall design"
+                  data-ko="React UI, 디자인 전반 담당"
+                >
+                  React UI, 디자인 전반 담당
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="project-box">
+            <a
+              href="https://youtu.be/mq2bqnb5Wvw?si=6kg2LuETo60bHf_g"
+              target="_blank"
+            >
+              <img alt="GPS 앱 WALKEE" src="img/i-mon.jpg" />
+              <div class="project-hover">
+                <p data-en="Team Project" data-ko="팀 프로젝트">팀 프로젝트</p>
+                <h3
+                  data-en="Security Program - i-mon"
+                  data-ko="보안 프로그램 - i-mon"
+                >
+                  보안 프로그램 - i-mon
+                </h3>
+                <p
+                  data-en="File export request/approval system "
+                  data-ko="파일 반출 요청 및 승인 시스템 "
+                >
+                  파일 반출 요청 및 승인 시스템
+                </p>
+                <p
+                  data-en="C# Agent, PHP MVC admin page"
+                  data-ko="C# Agent 개발, PHP MVC 관리자페이지"
+                >
+                  C# Agent 개발, PHP MVC 관리자페이지
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
     </div>
-    <button id="top-button" title="Go to top">△</button>
+    <!-- 탑 버튼 -->
+    <button id="top-button" title="Go to top">
+      <img alt="Top" src="./img/topbutton.svg" />
+    </button>
     <script src="script.js"></script>
   </body>
 </html>
